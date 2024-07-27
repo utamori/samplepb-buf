@@ -1,0 +1,23 @@
+version: v2
+
+modules:
+  - path: proto
+lint:
+  use:
+    - DEFAULT
+    - COMMENT_SERVICE
+    - COMMENT_RPC
+    - COMMENT_MESSAGE
+  except: #lintの除外ルール設定
+    - PACKAGE_DIRECTORY_MATCH
+    - PACKAGE_VERSION_SUFFIX
+    - RPC_REQUEST_RESPONSE_UNIQUE
+    - RPC_REQUEST_STANDARD_NAME
+    - SERVICE_SUFFIX
+    - ENUM_ZERO_VALUE_SUFFIX
+    - ENUM_VALUE_PREFIX
+    - RPC_RESPONSE_STANDARD_NAME
+    - FIELD_LOWER_SNAKE_CASE
+breaking:
+  use:
+    - FILE
